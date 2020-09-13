@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+
+  jenkins:
+    image: jenkins:latest
+    container_name: jenkinsServer
+    restart: always
+    environment:
+      TZ: Asia/Istanbul
+    ports:
+      - 9070:8080
+    tty: true
+    volumes:
+      - ./jenkins-data:/var/jenkins_home
+      - ./sock:/var/run/docker.sock
