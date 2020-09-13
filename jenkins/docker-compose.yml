@@ -2,7 +2,7 @@ version: '3.2'
 services:
 
   jenkins:
-    image: jenkins:latest
+    image: jenkins/jenkins:latest
     container_name: jenkinsServer
     restart: always
     environment:
